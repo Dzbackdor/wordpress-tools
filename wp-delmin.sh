@@ -66,7 +66,8 @@ WP_CONFIG="${WP_PATH}/wp-config.php"
 DB_NAME=$(grep -oP "define\(\s*'DB_NAME'\s*,\s*'\K[^']+(?=')" "$WP_CONFIG")
 DB_USER=$(grep -oP "define\(\s*'DB_USER'\s*,\s*'\K[^']+(?=')" "$WP_CONFIG")
 DB_PASS=$(grep -oP "define\(\s*'DB_PASSWORD'\s*,\s*'\K[^']+(?=')" "$WP_CONFIG")
-DB_PREFIX=$(grep -oP "\^\s*\\\$table_prefix\s*=\s*'\K[^']+(?=')" "$WP_CONFIG")
+# Fix the table prefix extraction regex
+DB_PREFIX=$(grep -oP "\$table_prefix\s*=\s*'\K[^']+(?=')" "$WP_CONFIG")
 
 # Fungsi untuk mendapatkan user ID dari username
 get_user_id() {
