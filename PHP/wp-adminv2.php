@@ -34,7 +34,7 @@ if (php_sapi_name() !== 'cli' && !isset($_SERVER['HTTP_HOST'])) {
 
 // ======== MODIFIKASI DI SINI ========
 // Tentukan path lengkap ke wp-config.php
-$wp_config_path = '/var/www/vhosts/schau-mer-mal.info/httpdocs/wp-config.php'; // Ganti dengan path absolut Anda
+$wp_config_path = 'weqrwe/werwer/wp-config.php'; // Ganti dengan path absolut Anda
 
 // Contoh:
 // $wp_config_path = '/home/username/public_html/wp-config.php';
